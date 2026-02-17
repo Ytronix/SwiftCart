@@ -40,12 +40,12 @@
       }
     </style>
   </head>
-  <body class="inter pb-96">
+  <body class="inter">
     <header>
       <nav class="navbar w-[95%] md:w-[85%] mx-auto">
         <div class="navbar">
           <div class="navbar-start">
-            <a class="text-2xl text-blue-600 font-bold">SwiftCart</a>
+            <a class="text-2xl text-sky-500 font-bold">SwiftCart</a>
           </div>
           <div class="navbar-center hidden font-bold lg:flex">
             <ul class="menu menu-horizontal px-1">
@@ -56,7 +56,7 @@
             </ul>
           </div>
           <div class="navbar-end">
-            <i class="fa-solid fa-cart-shopping text-2xl cursor-pointer"></i>
+            <i class="fa-solid fa-cart-shopping text-sky-500 text-2xl cursor-pointer"></i>
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
@@ -119,14 +119,14 @@
         <p class="text-gray-400 text-lg mb-16">
           We provide the best shopping experience with top notch services.
         </p>
-        <div class="cards flex justify-center items-center gap-10">
+        <div class="cards flex flex-col md:flex-row justify-center items-center gap-10">
           <div
             class="card relative w-60 bg-base-100 card-md shadow-md text-justify"
           >
             <div
-              class="card-logo bg-blue-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
+              class="card-logo bg-sky-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
             >
-              <i class="fa-regular fa-truck text-xl text-[#4200ff] rounded"></i>
+              <i class="fa-regular fa-truck text-xl text-sky-400 rounded"></i>
             </div>
             <div class="card-body">
               <h2 class="card-title mt-8 mb-2">Fast Delivery</h2>
@@ -140,9 +140,11 @@
             class="card relative w-60 bg-base-100 card-md shadow-md text-justify"
           >
             <div
-              class="card-logo bg-blue-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
+              class="card-logo bg-sky-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
             >
-              <i class="fa-regular fa-headphones  text-xl text-[#4200ff] rounded"></i>
+              <i
+                class="fa-regular fa-headphones text-xl text-sky-500 rounded"
+              ></i>
             </div>
             <div class="card-body">
               <h2 class="card-title mt-8 mb-2">24/7 Support</h2>
@@ -155,14 +157,17 @@
             class="card relative w-60 bg-base-100 card-md shadow-md text-justify"
           >
             <div
-              class="card-logo bg-blue-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
+              class="card-logo bg-sky-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
             >
-              <i class="fa-solid fa-shield-halved text-xl text-[#4200ff] rounded"></i>
+              <i
+                class="fa-solid fa-shield-halved text-xl text-sky-500 rounded"
+              ></i>
             </div>
             <div class="card-body">
               <h2 class="card-title mt-8 mb-2">Secure Payment</h2>
               <p class="text-gray-500">
-                Experience safe and secure transactions with our encrypted payment systems.
+                Experience safe and secure transactions with our encrypted
+                payment systems.
               </p>
             </div>
           </div>
@@ -170,9 +175,11 @@
             class="card relative w-60 bg-base-100 card-md shadow-md text-justify"
           >
             <div
-              class="card-logo bg-blue-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
+              class="card-logo bg-sky-100 p-2 rounded border-3 border-white shadow-lg absolute ml-3 mt-[-1rem]"
             >
-              <i class="fa-solid fa-arrows-rotate text-xl text-[#4200ff] rounded"></i>
+              <i
+                class="fa-solid fa-arrows-rotate text-xl text-sky-500 rounded"
+              ></i>
             </div>
             <div class="card-body">
               <h2 class="card-title mt-8 mb-2">Easy Returns</h2>
@@ -184,5 +191,49 @@
         </div>
       </div>
     </section>
+
+    <footer class="bg-blue-950 text-gray-400 py-16">
+        <div class="footer-contents w-[95%] md:w-[85%] mx-auto flex gap-10 border-b border-b-gray-600 pb-7">
+            <div class="flex-1 uppercase">
+                <h1 class="text-2xl text-sky-600 font-bold">SwiftCart</h1>
+                <p class="text-sm mt-5">Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery and excellent support.</p>
+            </div>
+            <div class="quick-link flex-1">
+                <h1 class="uppercase">Quick-links</h1>
+                <ul class="mt-5 text-gray-300 flex flex-col gap-3">
+                    <li class="cursor-pointer hover:text-white">Home</li>
+                    <li class="cursor-pointer hover:text-white">Products</li>
+                    <li class="cursor-pointer hover:text-white">About</li>
+                    <li class="cursor-pointer hover:text-white">Contact</li>
+                </ul>
+            </div>
+            <div class="flex-1">
+                <h1 class="uppercase">Support</h1>
+                <ul class="mt-5 text-gray-300 flex flex-col gap-3">
+                    <li class="cursor-pointer hover:text-white">FAQ</li>
+                    <li class="cursor-pointer hover:text-white">Shipping</li>
+                    <li class="cursor-pointer hover:text-white">Returns</li>
+                    <li class="cursor-pointer hover:text-white">Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="flex-1">
+                <h1 class="uppercase">Subscribe to our newsletter</h1>
+                <p class="text-gray-300 mt-5">The latest news, articles and resources sent to inbox weekly.</p>
+                <div class="subscribe-box flex gap-3">
+                    <input type="text" placeholder="Enter Your Email" class="input" />
+                    <button class="btn btn-soft btn-info">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-[95%] md:w-[85%] mx-auto flex justify-between pt-5">
+            <p>© 2026 SwiftCart Inc. All rights reserved.</p>
+            <div class="icons flex justify-center items-center gap-5">
+                <i class="fa-brands fa-facebook-f text-lg cursor-pointer hover:text-sky-500"></i>
+                <i class="fa-brands fa-twitter text-lg cursor-pointer hover:text-sky-500 text-lg cursor-pointer hover:text-sky-500"></i>
+                <i class="fa-brands fa-instagram text-lg cursor-pointer hover:text-sky-500"></i>
+                <i class="fa-brands fa-linkedin-in text-lg cursor-pointer hover:text-sky-500"></i>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
