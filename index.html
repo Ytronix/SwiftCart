@@ -38,8 +38,13 @@
       .inter {
         font-family: "Inter", sans-serif;
       }
-      .nav-btn-active{
+      .nav-btn-active {
         color: #38bdf8;
+      }
+      .active {
+        background: #bae6fd;
+        color: #0ea5e9;
+        border: none;
       }
     </style>
   </head>
@@ -52,10 +57,30 @@
           </div>
           <div class="navbar-center hidden font-bold lg:flex">
             <div class="menu menu-horizontal gap-10">
-              <button onclick="showPage('Home', this)" class="nav-btn hover:text-sky-400 cursor-pointer">Home</button>
-              <button onclick="showPage('Products', this)" class="nav-btn hover:text-sky-400 cursor-pointer">Products</button>
-              <button onclick="showPage('About', this)" class="nav-btn hover:text-sky-400 cursor-pointer">About</button>
-              <button onclick="showPage('Contact', this)" class="nav-btn hover:text-sky-400 cursor-pointer">Contact</button>
+              <button
+                onclick="showPage('Home', this)"
+                class="nav-btn hover:text-sky-400 cursor-pointer"
+              >
+                Home
+              </button>
+              <button
+                onclick="showPage('Products', this)"
+                class="nav-btn hover:text-sky-400 cursor-pointer"
+              >
+                Products
+              </button>
+              <button
+                onclick="showPage('About', this)"
+                class="nav-btn hover:text-sky-400 cursor-pointer"
+              >
+                About
+              </button>
+              <button
+                onclick="showPage('Contact', this)"
+                class="nav-btn hover:text-sky-400 cursor-pointer"
+              >
+                Contact
+              </button>
             </div>
           </div>
           <div class="navbar-end">
@@ -79,18 +104,38 @@
                   />
                 </svg>
               </div>
-              <ul
+              <div
                 tabindex="-1"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box shadow"
               >
-                <li class="hover:text-blue-800"><a>Home</a></li>
-                <li class="hover:text-blue-800"><a>Products</a></li>
-                <li class="hover:text-blue-800"><a>About</a></li>
-                <li class="hover:text-blue-800"><a>Contact</a></li>
-              </ul>
+                <button
+                  onclick="showPage('Home', this)"
+                  class="nav-btn hover:text-sky-400 cursor-pointer"
+                >
+                  Home
+                </button>
+                <button
+                  onclick="showPage('Products', this)"
+                  class="nav-btn hover:text-sky-400 cursor-pointer"
+                >
+                  Products
+                </button>
+                <button
+                  onclick="showPage('About', this)"
+                  class="nav-btn hover:text-sky-400 cursor-pointer"
+                >
+                  About
+                </button>
+                <button
+                  onclick="showPage('Contact', this)"
+                  class="nav-btn hover:text-sky-400 cursor-pointer"
+                >
+                  Contact
+                </button>
+              </div>
             </div>
           </div>
-        </>
+        </div>
       </nav>
     </header>
 
@@ -218,41 +263,17 @@
         class="flex justify-center items-center gap-3 flex-wrap mt-5"
       >
         <button
-          class="btn btn-neutral btn-outline rounded-4xl hover:border-none hover:bg-sky-200 hover:text-sky-500 w-15"
+          onclick="loadProducts()"
+          class="category-btn active btn btn-neutral btn-outline rounded-4xl hover:border-none hover:bg-sky-200 hover:text-sky-500 w-15"
         >
           All
         </button>
       </div>
 
-      <div id="product-container" class="mt-10 flex flex-wrap justify-center items-center gap-10">
-        <div class="card bg-base-100 w-72 h-96 shadow-sm">
-          <figure>
-            <img
-              
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body p-2 justify-between">
-            <h2 class="card-title justify-between text-xs mt-2">
-              <div class="badge badge-soft badge-info">Puki</div>
-              ⭐4.3 (2330)
-            </h2>
-            <h1 class="text-lg"> Card Title</h1>
-            <h1 class="card-title">NEW</h1>
-            <div class="card-action w-full flex gap-2">
-              <button class="btn btn-soft flex-1">
-                <i class="fa-regular fa-eye"></i>
-                Details
-              </button>
-              <button class="btn btn-soft btn-info flex-1">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Add
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div
+        id="product-container"
+        class="mt-10 flex flex-wrap justify-center items-center gap-10"
+      ></div>
     </section>
 
     <footer class="bg-blue-950 text-gray-400 py-16">
@@ -315,6 +336,12 @@
         </div>
       </div>
     </footer>
+
+    <dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="product-details"></div>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
